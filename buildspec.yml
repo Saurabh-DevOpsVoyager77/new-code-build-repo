@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Granting execution permissions to docker-install.sh..."
+      - chmod +x docker-install.sh
+  build:
+    commands:
+      - echo "Running docker-install.sh script..."
+      - ./docker-install.sh
+  post_build:
+    commands:
+      - echo "Script execution completed!"
+
+artifacts:
+  files:
+    - '**/*'
