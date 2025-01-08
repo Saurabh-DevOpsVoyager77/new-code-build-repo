@@ -13,6 +13,9 @@ phases:
       - mkdir -p installation
       - touch installation/file1.txt
       - touch installation/file2.txt
+      - echo "Saurabh here, put this data in file1.txt using above" > installation/file1.txt
+      - cd installation 
+      - pwd
   post_build:
     commands:
       - echo "Script execution completed!"
