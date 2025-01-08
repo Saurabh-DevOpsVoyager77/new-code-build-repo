@@ -9,6 +9,10 @@ phases:
     commands:
       - echo "Running docker-install.sh script..."
       - ./docker-install.sh
+      - echo "Creating installation directory and blank files..."
+      - mkdir -p installation
+      - touch installation/file1.txt
+      - touch installation/file2.txt
   post_build:
     commands:
       - echo "Script execution completed!"
